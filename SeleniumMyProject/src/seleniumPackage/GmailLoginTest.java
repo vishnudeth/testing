@@ -1,6 +1,7 @@
 package seleniumPackage;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class GmailLoginTest {
@@ -16,6 +17,7 @@ public class GmailLoginTest {
 		driver.findElement(By.xpath("(//div[@id = 'identifierNext'])[1]")).click();
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("//input[@name='password' and @type = 'password']")).sendKeys("asdasdasd");
+		
 		driver.findElement(By.xpath("//span[contains(text(),'Next')]")).click();
 		
 		String ExpectedErr = "Wrong password. Try again or click Forgot password to reset it.";

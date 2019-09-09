@@ -27,6 +27,7 @@ public class ExplicitWaitTest {
 		//Thread.sleep(5000);
 		
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("password")));
+		
 		driver.findElement(By.xpath("//input[@name='password' and @type = 'password']")).sendKeys("asdasdasd");
 		driver.findElement(By.xpath("//span[contains(text(),'Next')]")).click();
 		//Thread.sleep(5000);
@@ -34,7 +35,8 @@ public class ExplicitWaitTest {
 		String ExpectedErr = "Wrong password. Try again or click Forgot password to reset it.";
 		wait.until(ExpectedConditions.textToBePresentInElementLocated(By.xpath("//div[@class='GQ8Pzc']"), "Wrong password. Try again or click Forgot password to reset it."));
 		String ActualErr = driver.findElement(By.xpath("//div[@class='GQ8Pzc']")).getText();
-	
+		
+
 		if(ExpectedErr.equals(ActualErr)) {
 			System.out.println("Passed");
 		} else {

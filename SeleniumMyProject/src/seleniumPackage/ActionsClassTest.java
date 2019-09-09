@@ -1,6 +1,9 @@
 package seleniumPackage;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -14,6 +17,8 @@ public class ActionsClassTest {
 		FirefoxDriver driver = new FirefoxDriver();
 		
 		driver.get("https://www.ebay.ca/");
+		
+	
 		
 		WebElement electronics = driver.findElement(By.linkText("Electronics"));
 		Actions builder = new Actions(driver);

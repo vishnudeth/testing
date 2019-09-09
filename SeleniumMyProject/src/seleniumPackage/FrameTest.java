@@ -86,7 +86,6 @@ public class FrameTest {
 			System.out.println("Drag me is not present");
 		}
 		
-		
 		//driver.switchTo().parentFrame()
 		//The above code work when we have multiple frames inside one frame and we need to switch back to the parent frame
 		

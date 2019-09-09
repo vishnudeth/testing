@@ -25,10 +25,14 @@ public class GoogleSuggestionList {
 		
 		System.out.println(googleList.size());
 		
-		for(int i=0; i<googleList.size(); i++)
-		{
-			System.out.println(googleList.get(i).getText());
+		for(WebElement a: googleList) {
+			System.out.println(a.getText());
 		}
+		
+		/*
+		 * for(int i=0; i<googleList.size(); i++) {
+		 * System.out.println(googleList.get(i).getText()); }
+		 */
 		
 		
 	}
